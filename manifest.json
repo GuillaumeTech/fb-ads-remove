@@ -1,0 +1,17 @@
+{
+  "name": "Fb ads clean",
+  "version": "0",
+  "description": "Remove \"sponsored \", \"post you may like\" and \"suggested for you\" posts",
+  "background": {"page": "background.html"},
+  "manifest_version": 2,
+  "browser_action": {
+    "name": "Manipulate DOM",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [ {
+    "js": ["background.js" ],
+    "css": ["customStyles.css"],
+    "matches": [ "http://www.facebook.com/", "https://www.facebook.com/"]
+  }]
+}
